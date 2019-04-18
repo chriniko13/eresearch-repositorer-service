@@ -16,12 +16,17 @@ This service integrates with the following external systems:
 
 
 It consists of two workflows in order to collect and store the data.
-* `repositorer-first-step-workflow.xml` TODO
-* `repositorer-second-step-workflow.xml` TODO
+* `repositorer-first-step-workflow.xml` TODO explain better & diagram
+* `repositorer-second-step-workflow.xml` TODO explain better & diagram
 
 Also it handles errors with the following workflows:
-* `repositorer-error-handling-aggregators-workflow.xml` TODO
-* `repositorer-error-handling-workflow.xml` TODO
+* `repositorer-error-handling-aggregators-workflow.xml` TODO explain better & diagram
+* `repositorer-error-handling-workflow.xml` TODO explain better & diagram
+
+
+### Convenient UI (Admin Portal) in order to run repositorer operations
+* [eresearch-repositorer-admin-portal](https://github.com/chriniko13/eresearch-repositorer-admin-portal)
+
 
 
 ### External Dependencies needed in order to run service (Other services && Infrastructure)
