@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/integration"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:int="http://www.springframework.org/schema/integration"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/integration
+			http://www.springframework.org/schema/integration/spring-integration.xsd">
+
+    <!-- CHANNELS -->
+    <int:channel id="extraction-pre-details-channel"
+                 datatype="com.eresearch.repositorer.dto.repositorer.request.RepositorerFindDto"/>
+
+    <int:channel id="extraction-pre-2-details-channel"
+                 datatype="com.eresearch.repositorer.transformer.dto.RepositorerFindDtos"/>
+
+    <int:publish-subscribe-channel id="extraction-details-channel"
+                                   datatype="com.eresearch.repositorer.transformer.dto.RepositorerFindDtos"
+                                   max-subscribers="#{externalSystemsMessagesAwaitingReleaseStrategy.NO_OF_EXTERNAL_SYSTEMS}"
+                                   min-subscribers="#{externalSystemsMessagesAwaitingReleaseStrategy.NO_OF_EXTERNAL_SYSTEMS}"/>
+
+
+    <!-- START OF REPOSITORER WORKFLOW [ERROR RECOVER READY] -->
+    <int:gateway id="authorExtractor"
+                 service-interface="com.eresearch.repositorer.gateway.AuthorExtractor"
+                 default-request-channel="extraction-pre-details-channel"
+                 error-channel="errorChannel"
+                 async-executor="authorExtractionExecutor">
+        <method name="extract"/>
+    </int:gateway>
+
+    <int:service-activator input-channel="extraction-pre-details-channel"
+                           output-channel="extraction-pre-2-details-channel"
+                           ref="repositorerFindDtoPopulator"
+                           method="populate"/>
+
+    <int:service-activator input-channel="extraction-pre-2-details-channel"
+                           output-channel="extraction-details-channel"
+                           ref="namesLookupStorageActivator"
+                           method="store"/>
+
+    <!-- DBLP ACTIVATOR [ERROR RECOVER READY] -->
+    <int:service-activator ref="dblpConsumptionActivator"
+                           method="send"
+                           input-channel="extraction-details-channel"/>
+
+    <!-- SCIENCE DIRECT ACTIVATOR [ERROR RECOVER READY] -->
+    <int:service-activator ref="scienceDirectConsumptionActivator"
+                           method="send"
+                           input-channel="extraction-details-channel"/>
+
+    <!-- ELSEVIER AUTHOR ACTIVATOR [ERROR RECOVER READY] -->
+    <int:service-activator ref="elsevierAuthorConsumptionActivator"
+                           method="send"
+                           input-channel="extraction-details-channel"/>
+
+    <!-- END OF REPOSITORER WORKFLOW -->
+
+</beans:beans>

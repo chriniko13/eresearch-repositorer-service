@@ -1,0 +1,6 @@
+-------------
+--- NOTES ---
+-------------
+
+1)  In order to see jacoco reports, when you have the target/jacoco.exec generated, then run the following maven goal: jacoco:report.
+    Then go to target/site/jacoco/index.html where you can see the results.

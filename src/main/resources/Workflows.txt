@@ -1,0 +1,43 @@
+Supporting workflows:
+
+1) DBLP workflow [COMPLETED]
+    a) first step [COMPLETED]
+    b) second step [COMPLETED]
+
+2) ScienceDirect workflow [COMPLETED]
+    a) first step [COMPLETED]
+    b) second step [COMPLETED]
+
+3) Scopus workflow [COMPLETED]
+    a) first step [COMPLETED]
+    b) second step [COMPLETED]
+
+
+---------------------------------------
+
+* Retry policy-mechanism in connector components. [COMPLETED]
+
+---------------------------------------
+
+* Error handling on workflows.
+        - first part  [COMPLETED]
+        - second part [COMPLETED]
+
+  Note: how to test it? Answer: PUT ---> throw new RepositorerBusinessException(RepositorerError.APPLICATION_NOT_IN_CORRECT_STATE,
+                                                RepositorerError.APPLICATION_NOT_IN_CORRECT_STATE.getMessage(), this.getClass().getName());
+
+
+* Error recovery scheduler [COMPLETED]
+
+---------------------------------------
+
+* Concurrency-parallel improvements on workflows [COMPLETED]
+
+---------------------------------------
+
+
+* Concurrency-parallel improvements on results transformers [NICE TO HAVE]
+    -> DBLP     [NICE TO HAVE]
+    -> SCOPUS   [NICE TO HAVE]
+    -> SCIDIR   [NICE TO HAVE]
+    -> AUTHOR   [NICE TO HAVE]

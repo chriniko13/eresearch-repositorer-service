@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/integration"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:jms="http://www.springframework.org/schema/integration/jms"
+             xmlns:int="http://www.springframework.org/schema/integration"
+             xmlns:task="http://www.springframework.org/schema/task"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/integration
+			http://www.springframework.org/schema/integration/spring-integration.xsd
+			http://www.springframework.org/schema/integration/jms
+			http://www.springframework.org/schema/integration/jms/spring-integration-jms.xsd
+			http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+
+    <!-- CHANNELS -->
+    <int:channel id="authorResultsChannel"
+                 datatype="java.lang.String"/>
+
+    <int:channel id="processedAuthorResultsChannel"
+                 datatype="com.eresearch.repositorer.transformer.dto.ElsevierAuthorResultsTransformerDto"/>
+
+    <int:channel id="preProcessedAuthorResultsChannel"
+                 datatype="com.eresearch.repositorer.transformer.dto.ElsevierAuthorResultsTransformerDto"/>
+
+    <int:channel id="scopusResultsChannel"
+                 datatype="java.lang.String"/>
+
+    <int:channel id="dblpResultsChannel"
+                 datatype="java.lang.String"/>
+
+    <int:channel id="scidirResultsChannel"
+                 datatype="java.lang.String"/>
+
+    <int:channel id="processedResultsChannel"
+                 datatype="com.eresearch.repositorer.transformer.dto.TransformedEntriesDto"/>
+
+    <int:channel id="transformedResultsChannel"
+                 datatype="com.eresearch.repositorer.domain.record.Record"/>
+
+    <int:channel id="filteredTransformedResultsChannel"
+                 datatype="com.eresearch.repositorer.domain.record.Record"/>
+
+    <int:channel id="uniqueTransformedResultsChannel"
+                 datatype="com.eresearch.repositorer.domain.record.Record"/>
+
+    <int:channel id="processedUniqueTransformedResultsChannel"
+                 datatype="com.eresearch.repositorer.domain.record.Record"/>
+
+    <!-- EXECUTOR -->
+    <task:executor id="jmsListenersExecutorPool" keep-alive="15" pool-size="10-80" queue-capacity="300" rejection-policy="CALLER_RUNS"/>
+
+    <!-- CHANNELS ADAPTERS [ERROR RECOVER READY] -->
+    <jms:message-driven-channel-adapter id="authorResultsJmsAdapter"
+                                        channel="authorResultsChannel"
+                                        destination="authorResultsQueue"
+                                        error-channel="errorChannel"
+                                        concurrent-consumers="3" max-concurrent-consumers="20"
+                                        task-executor="jmsListenersExecutorPool"/>
+
+    <jms:message-driven-channel-adapter id="scopusResultsJmsAdapter"
+                                        channel="scopusResultsChannel"
+                                        destination="scopusResultsQueue"
+                                        error-channel="errorChannel"
+                                        concurrent-consumers="3" max-concurrent-consumers="20"
+                                        task-executor="jmsListenersExecutorPool"/>
+
+    <jms:message-driven-channel-adapter id="dblpResultsJmsAdapter"
+                                        channel="dblpResultsChannel"
+                                        destination="dblpResultsQueue"
+                                        error-channel="errorChannel"
+                                        concurrent-consumers="3" max-concurrent-consumers="20"
+                                        task-executor="jmsListenersExecutorPool"/>
+
+    <jms:message-driven-channel-adapter id="scidirResultsJmsAdapter"
+                                        channel="scidirResultsChannel"
+                                        destination="scidirResultsQueue"
+                                        error-channel="errorChannel"
+                                        concurrent-consumers="3" max-concurrent-consumers="20"
+                                        task-executor="jmsListenersExecutorPool"/>
+
+
+    <!-- DBLP WORKFLOW [ERROR RECOVER READY] -->
+    <int:transformer input-channel="dblpResultsChannel"
+                     output-channel="processedResultsChannel"
+                     ref="dblpResultsTransfomer"
+                     method="transform"/>
+
+
+    <!-- ELSEVIER AUTHOR WORKFLOW [ERROR RECOVER READY] -->
+    <int:transformer input-channel="authorResultsChannel"
+                     output-channel="preProcessedAuthorResultsChannel"
+                     ref="elsevierAuthorResultsTransformer"
+                     method="transform"/>
+
+    <int:aggregator input-channel="preProcessedAuthorResultsChannel"
+                    output-channel="processedAuthorResultsChannel"
+
+                    ref="elsevierAuthorResultsAggregator"
+                    method="transform"
+
+                    correlation-strategy="transactionIdCorrelationStrategy"
+                    release-strategy="elsevierAuthorMessagesAwaitingReleaseStrategy"
+
+                    send-partial-result-on-expiry="false"
+                    discard-channel="discard-channel-for-aggregators"
+                    group-timeout="14400000"
+                    expire-groups-upon-timeout="true"
+                    expire-groups-upon-completion="true"/> <!--14,400,000ms == 4 hours (better-dev) | 7,200,000ms == 2 hours (dev) | 120000ms == 2minutes (test)-->
+
+    <int:service-activator input-channel="processedAuthorResultsChannel"
+                           output-channel="nullChannel"
+                           ref="elsevierScopusConsumptionActivator"
+                           method="send"/>
+
+
+    <!-- ELSEVIER SCOPUS WORKFLOW [ERROR RECOVER READY] -->
+    <int:transformer input-channel="scopusResultsChannel"
+                     output-channel="processedResultsChannel"
+                     ref="elsevierScopusResultsTransformer"
+                     method="transform"/>
+
+
+    <!-- SCIENCE DIRECT WORKFLOW [ERROR RECOVER READY] -->
+    <int:transformer input-channel="scidirResultsChannel"
+                     output-channel="processedResultsChannel"
+                     ref="scienceDirectResultsTransformer"
+                     method="transform"/>
+
+
+    <!-- FINAL STEP OF WORKFLOW [ERROR RECOVER READY] -->
+    <int:aggregator input-channel="processedResultsChannel"
+                    output-channel="transformedResultsChannel"
+
+                    ref="transformedResultsAggregator"
+                    method="aggregate"
+
+                    correlation-strategy="transactionIdCorrelationStrategy"
+                    release-strategy="externalSystemsMessagesAwaitingReleaseStrategy"
+
+                    send-partial-result-on-expiry="false"
+                    discard-channel="discard-channel-for-aggregators"
+                    group-timeout="14400000"
+                    expire-groups-upon-timeout="true"
+                    expire-groups-upon-completion="true"/> <!--14,400,000ms == 4 hours (better-dev) | 7,200,000ms == 2 hours (dev) | 120000ms == 2minutes (test)-->
+
+    <int:transformer input-channel="transformedResultsChannel"
+                     output-channel="filteredTransformedResultsChannel"
+                     ref="authorEntriesMatchingTransformer"
+                     method="transform"/>
+
+    <int:transformer input-channel="filteredTransformedResultsChannel"
+                     output-channel="uniqueTransformedResultsChannel"
+                     ref="recordsApplyUniquenessTransformer"
+                     method="transform"/>
+
+    <int:transformer input-channel="uniqueTransformedResultsChannel"
+                     output-channel="processedUniqueTransformedResultsChannel"
+                     ref="metadataNullValuesRemoverTransformer"
+                     method="transform"/>
+
+    <int:service-activator input-channel="processedUniqueTransformedResultsChannel"
+                           ref="transformedResultsPersister"
+                           method="persist"/>
+
+
+    <!-- JMS CONFIGURATIONS -->
+    <!-- queues -->
+    <beans:bean id="authorResultsQueue"
+                class="org.apache.activemq.command.ActiveMQQueue">
+        <beans:constructor-arg value="AUTHOR_RESULTS_QUEUE"/>
+    </beans:bean>
+
+    <beans:bean id="scopusResultsQueue"
+                class="org.apache.activemq.command.ActiveMQQueue">
+        <beans:constructor-arg value="SCOPUS_RESULTS_QUEUE"/>
+    </beans:bean>
+
+    <beans:bean id="dblpResultsQueue"
+                class="org.apache.activemq.command.ActiveMQQueue">
+        <beans:constructor-arg value="DBLP_RESULTS_QUEUE"/>
+    </beans:bean>
+
+    <beans:bean id="scidirResultsQueue"
+                class="org.apache.activemq.command.ActiveMQQueue">
+        <beans:constructor-arg value="SCIDIR_RESULTS_QUEUE"/>
+    </beans:bean>
+
+    <!-- connection factory -->
+    <beans:bean name="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <beans:property name="brokerURL" value="tcp://localhost:61616"/>
+    </beans:bean>
+
+</beans:beans>
