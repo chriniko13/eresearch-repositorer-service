@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import java.util.Collection;
+import java.util.List;
 
 @EqualsAndHashCode(of = {"dcIdentifier", "dcTitle"})
 @Getter
@@ -46,7 +47,7 @@ public class ScopusSearchViewEntry {
     private String prismPublicationName;
 
     @JsonProperty("prism:isbn")
-    private String prismIsbn;
+    private List<ScopusSearchPrismIsbn> prismIsbns;
 
     @JsonProperty("prism:issn")
     private String prismIssn;

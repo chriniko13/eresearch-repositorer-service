@@ -53,7 +53,7 @@ public class ElsevierScopusResultsTransformer implements ResultsTransformer {
                     .build();
 
         } catch (IOException error) {
-            log.error("ElsevierScopusResultsTransformer#transform --- error occurred", error);
+            log.error("ElsevierScopusResultsTransformer#transform --- error occurred, error message: " + error.toString(), error);
 
             throw new RepositorerBusinessException(RepositorerError.COULD_NOT_DESERIALIZE_MESSAGE,
                     RepositorerError.COULD_NOT_DESERIALIZE_MESSAGE.getMessage(),
@@ -186,9 +186,16 @@ public class ElsevierScopusResultsTransformer implements ResultsTransformer {
         metadata.put(MetadataLabelsHolder.ScopusLabels.PRISM_PUBLICATION_NAME.getLabelName(),
                 prismPublicationName);
 
-        String prismIsbn = entry.getPrismIsbn();
-        metadata.put(MetadataLabelsHolder.ScopusLabels.PRISM_ISBN.getLabelName(),
-                prismIsbn);
+        List<ScopusSearchPrismIsbn> prismIsbns = entry.getPrismIsbns();
+        if (prismIsbns != null && !prismIsbns.isEmpty()) {
+
+            String prismIsbnsAsString = objectMapper.writeValueAsString(prismIsbns);
+            metadata.put(MetadataLabelsHolder.ScopusLabels.PRISM_ISBNS.getLabelName(), prismIsbnsAsString);
+
+        } else {
+            metadata.put(MetadataLabelsHolder.ScopusLabels.PRISM_ISBNS.getLabelName(), null);
+        }
+
 
         String prismIssn = entry.getPrismIssn();
         metadata.put(MetadataLabelsHolder.ScopusLabels.PRISM_ISSN.getLabelName(),

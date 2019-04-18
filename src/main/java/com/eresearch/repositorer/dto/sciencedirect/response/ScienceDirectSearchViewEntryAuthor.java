@@ -1,7 +1,7 @@
 package com.eresearch.repositorer.dto.sciencedirect.response;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,16 +9,46 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 public class ScienceDirectSearchViewEntryAuthor {
 
-    @JsonProperty("@_fa")
-    private String fa;
+    @JsonProperty("$")
+    private String name;
 
-    @JsonProperty("given-name")
-    private String givenname;
 
-    @JsonProperty("surname")
-    private String surname;
+    /*
+        Note, in order to handle the following case:
+
+        1)
+        "authors": {
+          "author": "Ioannis Voyiatzis"
+        }
+
+
+        2)
+        "authors": {
+          "author": [
+            {
+              "$": "Serge Bernard"
+            },
+            {
+              "$": "Mohamed Masmoudi"
+            },
+            {
+              "$": "Ioannis Voyiatzis"
+            }
+          ]
+        }
+
+
+     */
+    @JsonCreator
+    public ScienceDirectSearchViewEntryAuthor(String input) {
+        if (input.contains("$")) {
+            String s = input.split(":")[1];
+            this.setName(s);
+        } else {
+            this.setName(input);
+        }
+    }
 
 }

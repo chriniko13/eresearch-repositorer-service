@@ -14,7 +14,7 @@ public enum MetadataLabelsHolder {
         PRISM_AGGREGATION_TYPE("Prism Aggregation Type"),
         CITED_BY_COUNT("Cited by count"),
         PRISM_PUBLICATION_NAME("Prism Publication Name"),
-        PRISM_ISBN("Prism Isbn"),
+        PRISM_ISBNS("Prism Isbns"),
         PRISM_ISSN("Prism Issn"),
         PRISM_EISSN("Prism EIssn"),
         PRISM_VOLUME("Prism Volume"),
@@ -56,6 +56,7 @@ public enum MetadataLabelsHolder {
 
     public enum SciDirLabels {
 
+        LOAD_DATE("Load Date"),
         LINKS("Links"),
         PRISM_URL("Prism Url"),
         DC_IDENTIFIER("Dc Identifier"),
@@ -71,7 +72,7 @@ public enum MetadataLabelsHolder {
         PRISM_EDITION("Prism Edition"),
         PRISM_STARTING_PAGE("Prism Starting Page"),
         PRISM_ENDING_PAGE("Prism Ending Page"),
-        PRISM_COVER_DATES("Prism Cover Dates"),
+        PRISM_COVER_DATE("Prism Cover Date"),
         PRISM_COVER_DISPLAY_DATE("Prism Cover Display Date"),
         DC_CREATOR("Dc Creator"),
         AUTHORS("Authors"),

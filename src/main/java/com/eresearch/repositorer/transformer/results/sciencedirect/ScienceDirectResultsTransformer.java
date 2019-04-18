@@ -52,7 +52,7 @@ public class ScienceDirectResultsTransformer implements ResultsTransformer {
                     .build();
 
         } catch (IOException error) {
-            log.error("ScienceDirectResultsTransformer#transform --- error occurred", error);
+            log.error("ScienceDirectResultsTransformer#transform --- error occurred, error: " + error.toString(), error);
 
             throw new RepositorerBusinessException(RepositorerError.COULD_NOT_DESERIALIZE_MESSAGE,
                     RepositorerError.COULD_NOT_DESERIALIZE_MESSAGE.getMessage(),
@@ -126,7 +126,34 @@ public class ScienceDirectResultsTransformer implements ResultsTransformer {
 
                 entryAuthors = authors
                         .stream()
-                        .map(author -> new Author(author.getGivenname(), null, author.getSurname()))
+                        .map(author -> {
+
+                            String name = author.getName();
+
+                            String[] splittedName = name.split(" ");
+
+                            Author authorRecord;
+
+                            if (splittedName.length == 1) {
+                                authorRecord = new Author(null, null, splittedName[0]);
+                            } else if (splittedName.length == 2) {
+                                authorRecord = new Author(splittedName[0], null, splittedName[1]);
+                            } else { // > 2
+
+                                List<String> temp = new ArrayList<>(splittedName.length - 1);
+                                for (int i = 2; i < splittedName.length; i++) {
+                                    temp.add(splittedName[i]);
+                                }
+
+                                String calculatedSurname = String.join(" ", temp);
+
+                                authorRecord = new Author(splittedName[0], splittedName[1], calculatedSurname);
+
+                            }
+
+                            return authorRecord;
+
+                        })
                         .collect(LinkedHashSet::new, Set::add, Set::addAll);
             }
         }
@@ -160,6 +187,10 @@ public class ScienceDirectResultsTransformer implements ResultsTransformer {
             metadata.put(MetadataLabelsHolder.SciDirLabels.LINKS.getLabelName(),
                     null);
         }
+
+
+        String loadDate = sciDirEntry.getLoadDate();
+        metadata.put(MetadataLabelsHolder.SciDirLabels.LOAD_DATE.getLabelName(), loadDate);
 
         String prismUrl = sciDirEntry.getPrismUrl();
         metadata.put(MetadataLabelsHolder.SciDirLabels.PRISM_URL.getLabelName(),
@@ -217,22 +248,8 @@ public class ScienceDirectResultsTransformer implements ResultsTransformer {
         metadata.put(MetadataLabelsHolder.SciDirLabels.PRISM_ENDING_PAGE.getLabelName(),
                 prismEndingPage);
 
-        Collection<PrismCoverDate> coverDates = sciDirEntry.getCoverDates();
-        if (coverDates != null && !coverDates.isEmpty()) {
-
-            List<String> coverDatesValues = coverDates
-                    .stream()
-                    .map(PrismCoverDate::getValue)
-                    .filter(Objects::nonNull)
-                    .collect(Collectors.toList());
-
-            String coverDateValuesAsString = objectMapper.writeValueAsString(coverDatesValues);
-            metadata.put(MetadataLabelsHolder.SciDirLabels.PRISM_COVER_DATES.getLabelName(),
-                    coverDateValuesAsString);
-        } else {
-            metadata.put(MetadataLabelsHolder.SciDirLabels.PRISM_COVER_DATES.getLabelName(),
-                    null);
-        }
+        String prismCoverDate = sciDirEntry.getPrismCoverDate();
+        metadata.put(MetadataLabelsHolder.SciDirLabels.PRISM_COVER_DATE.getLabelName(), prismCoverDate);
 
         String coverDisplayDate = sciDirEntry.getCoverDisplayDate();
         metadata.put(MetadataLabelsHolder.SciDirLabels.PRISM_COVER_DISPLAY_DATE.getLabelName(),

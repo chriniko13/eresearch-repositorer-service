@@ -12,6 +12,14 @@ public class SpecificationIT {
 
         Assert.assertEquals(1, 1);
 
+        // given
+
+
+        // when
+
+
+        // then
+
     }
 
 }

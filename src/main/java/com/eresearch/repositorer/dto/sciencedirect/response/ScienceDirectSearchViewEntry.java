@@ -22,6 +22,9 @@ public class ScienceDirectSearchViewEntry {
     @JsonProperty("@_fa")
     private String fa;
 
+    @JsonProperty("load-date")
+    private String loadDate;
+
     @JsonProperty("link")
     private Collection<ScienceDirectSearchViewLink> links;
 
@@ -68,7 +71,7 @@ public class ScienceDirectSearchViewEntry {
     private String prismEndingPage;
 
     @JsonProperty("prism:coverDate")
-    private Collection<PrismCoverDate> coverDates;
+    private String prismCoverDate;
 
     @JsonProperty("prism:coverDisplayDate")
     private String coverDisplayDate;

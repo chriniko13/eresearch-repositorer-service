@@ -1,0 +1,15 @@
+
+
+CREATE DATABASE IF NOT EXISTS scidir_consumer;
+
+CREATE DATABASE IF NOT EXISTS scopus_consumer;
+
+CREATE DATABASE IF NOT EXISTS dblp_consumer;
+
+CREATE DATABASE IF NOT EXISTS author_matcher;
+
+CREATE DATABASE IF NOT EXISTS author_finder_consumer;
+
+
+
+
