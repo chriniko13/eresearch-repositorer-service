@@ -50,7 +50,13 @@ public class ExternalSystemsMessagesAwaitingReleaseStrategy implements ReleaseSt
         ReleaseThresholdResult resultForDynamicSystems = discoverReleaseThresholdOfDynamicExternalSystems(group);
 
         if (resultForNotDynamicSystems.isReady() && resultForDynamicSystems.isReady()) {
-            return group.size() == resultForNotDynamicSystems.getReleaseThreshold() + resultForDynamicSystems.getReleaseThreshold();
+
+            int messageGroupSize = group.size();
+
+            int notDynamicSystemsResultSize = resultForNotDynamicSystems.getReleaseThreshold();
+            int dynamicSystemsResultSize = resultForDynamicSystems.getReleaseThreshold();
+
+            return messageGroupSize ==  notDynamicSystemsResultSize + dynamicSystemsResultSize;
         } else {
             return false;
         }

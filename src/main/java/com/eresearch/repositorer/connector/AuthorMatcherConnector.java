@@ -22,8 +22,6 @@ import java.net.URI;
 @Component
 public class AuthorMatcherConnector implements Connector {
 
-    private static final String AUTHOR_MATCHER_ENDPOINT = "/author-matcher/match";
-
     @Value("${author.matcher.url}")
     private String authorMatcherUrl;
 
@@ -37,7 +35,7 @@ public class AuthorMatcherConnector implements Connector {
 
     private AuthorMatcherResultsDto performAuthorMatching(AuthorComparisonDto authorComparisonDto) {
 
-        final String url = authorMatcherUrl + AUTHOR_MATCHER_ENDPOINT;
+        final String url = authorMatcherUrl;
 
         final RequestEntity<AuthorComparisonDto> requestEntity = new RequestEntity<>(
                 authorComparisonDto,

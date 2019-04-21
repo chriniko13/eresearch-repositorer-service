@@ -1,0 +1,2761 @@
+{
+  "transactionId": "102aaf3f-f512-4cb7-8557-ca7c4f7abec2",
+  "exceptionMessage": null,
+  "sciDirResultsDto": {
+    "operation-result": true,
+    "process-finished-date": "2019-04-21T18:17:16.484Z",
+    "requested-elsevier-sciencedirect-consumer-dto": {
+      "firstname": "C",
+      "initials": "",
+      "surname": "Skourlas"
+    },
+    "fetched-results-size": 3,
+    "fetched-results": [
+      {
+        "search-results": {
+          "opensearch:totalResults": "13",
+          "opensearch:startIndex": "0",
+          "opensearch:itemsPerPage": "13",
+          "opensearch:Query": {
+            "@role": "request",
+            "@searchTerms": "aut(C Skourlas)",
+            "@startPage": "0"
+          },
+          "link": [
+            {
+              "@_fa": "true",
+              "@href": "https://api.elsevier.com/content/search/sciencedirect?start=0&count=25&query=aut%28C+Skourlas%29&view=complete",
+              "@ref": "self",
+              "@type": "application/json"
+            },
+            {
+              "@_fa": "true",
+              "@href": "https://api.elsevier.com/content/search/sciencedirect?start=0&count=25&query=aut%28C+Skourlas%29&view=complete",
+              "@ref": "first",
+              "@type": "application/json"
+            }
+          ],
+          "entry": [
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040099",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040099?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040099",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.098",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Combining Probabilistic Classifiers for Text Classification",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "307",
+              "prism:endingPage": "312",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Kostas Fragos",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Kostas Fragos"
+                  },
+                  {
+                    "$": "Petros Belsis"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.098",
+              "pii": "S1877042814040099",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040105",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040105?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040105",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.099",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Sharing Knowledge and Integrated Information in Therapeutic Radiological Physics",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "313",
+              "prism:endingPage": "320",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Argyroula Christopoulou",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Argyroula Christopoulou"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Petros Belsis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.099",
+              "pii": "S1877042814040105",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003741",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003741?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003741",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.081",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Employing Ubiquitous Computing Devices and Technologies in the Higher Education Classroom of the Future",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "487",
+              "prism:endingPage": "494",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Catherine Marinagi",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Catherine Marinagi"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Petros Belsis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.081",
+              "pii": "S1877042813003741",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003753",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003753?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003753",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.082",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "New Directions for Pervasive Computing in Logistics",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "495",
+              "prism:endingPage": "502",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Catherine Marinagi",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Catherine Marinagi"
+                  },
+                  {
+                    "$": "Petros Belsis"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.082",
+              "pii": "S1877042813003753",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040786",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040786?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040786",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.159",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "The Analysis of the Length of Studies in Higher Education based on Clustering and the Extraction of Association Rules",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "567",
+              "prism:endingPage": "575",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Petros Belsis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Petros Belsis"
+                  },
+                  {
+                    "$": "Ioannis Chalaris"
+                  },
+                  {
+                    "$": "Manolis Chalaris"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Anastasios Tsolakidis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.159",
+              "pii": "S1877042814040786",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003777",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003777?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003777",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.084",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Extraction of Rules based on Students’ Questionnaires",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "510",
+              "prism:endingPage": "517",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Manolis Chalaris",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Manolis Chalaris"
+                  },
+                  {
+                    "$": "Ioannis Chalaris"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Anastasios Tsolakidis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.084",
+              "pii": "S1877042813003777",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003716",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003716?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003716",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.078",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "e-Doctor: A Web based Support Vector Machine for Automatic Medical Diagnosis",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "467",
+              "prism:endingPage": "474",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "A. Kampouraki",
+              "authors": {
+                "author": [
+                  {
+                    "$": "A. Kampouraki"
+                  },
+                  {
+                    "$": "D. Vassis"
+                  },
+                  {
+                    "$": "P. Belsis"
+                  },
+                  {
+                    "$": "C. Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.078",
+              "pii": "S1877042813003716",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003704",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003704?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003704",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.077",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "A Resource Reservation and Traffic Categorization Agent for QoS in Medical Ad Hoc Networks",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "460",
+              "prism:endingPage": "466",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "D. Vassis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "D. Vassis"
+                  },
+                  {
+                    "$": "A. Kampouraki"
+                  },
+                  {
+                    "$": "P. Belsis"
+                  },
+                  {
+                    "$": "C. Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.077",
+              "pii": "S1877042813003704",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003686",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003686?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003686",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.075",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Personalized Adaptive Networked Learning for Disabled Students & Social Networking for the Inclusion of students – The Multimedu tool",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "451",
+              "prism:endingPage": "455",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Nektarios Giannoulis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Nektarios Giannoulis"
+                  },
+                  {
+                    "$": "Anthimoula Kagia"
+                  },
+                  {
+                    "$": "Panos Kakoulidis"
+                  },
+                  {
+                    "$": "Costas Rikkou"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.075",
+              "pii": "S1877042813003686",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2008-12-31T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S0164121208002744",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S0164121208002744?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S0164121208002744",
+              "dc:identifier": "DOI:10.1016/j.jss.2008.12.031",
+              "openaccess": "false",
+              "openaccessFlag": null,
+              "dc:title": "CUDL language semantics: Updating FDB data",
+              "prism:publicationName": "Journal of Systems and Software",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "82",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "947",
+              "prism:endingPage": "962",
+              "prism:coverDate": "2009-06-30",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Nikitas N. Karanikolas",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Nikitas N. Karanikolas"
+                  },
+                  {
+                    "$": "Maria Nitsiou"
+                  },
+                  {
+                    "$": "Emmanuel J. Yannakoudakis"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.jss.2008.12.031",
+              "pii": "S0164121208002744",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040452",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040452?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040452",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.134",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "An Agent Based Architecture Benchmark",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "429",
+              "prism:endingPage": "435",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Petros Belsis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Petros Belsis"
+                  },
+                  {
+                    "$": "Stefanos Gritzalis"
+                  },
+                  {
+                    "$": "Costas Lambrinoudakis"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Dimitris Vassis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.134",
+              "pii": "S1877042814040452",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040336",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040336?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040336",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.122",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Risk Reduction Strategies in Online Shopping: E-trust Perspective",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "418",
+              "prism:endingPage": "423",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Angeliki Vos",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Angeliki Vos"
+                  },
+                  {
+                    "$": "Catherine Marinagi"
+                  },
+                  {
+                    "$": "Panagiotis Trivellas"
+                  },
+                  {
+                    "$": "Niclas Eberhagen"
+                  },
+                  {
+                    "$": "Georgios Giannakopoulos"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.122",
+              "pii": "S1877042814040336",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040440",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040440?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040440",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.133",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "The Human Factor of Information Security: Unintentional Damage Perspective",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "424",
+              "prism:endingPage": "428",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Efthymia Metalidou",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Efthymia Metalidou"
+                  },
+                  {
+                    "$": "Catherine Marinagi"
+                  },
+                  {
+                    "$": "Panagiotis Trivellas"
+                  },
+                  {
+                    "$": "Niclas Eberhagen"
+                  },
+                  {
+                    "$": "Georgios Giannakopoulos"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.133",
+              "pii": "S1877042814040440",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            }
+          ]
+        }
+      },
+      {
+        "search-results": {
+          "opensearch:totalResults": "13",
+          "opensearch:startIndex": "0",
+          "opensearch:itemsPerPage": "13",
+          "opensearch:Query": {
+            "@role": "request",
+            "@searchTerms": "specific-author(C Skourlas)",
+            "@startPage": "0"
+          },
+          "link": [
+            {
+              "@_fa": "true",
+              "@href": "https://api.elsevier.com/content/search/sciencedirect?start=0&count=25&query=specific-author%28C+Skourlas%29&view=complete",
+              "@ref": "self",
+              "@type": "application/json"
+            },
+            {
+              "@_fa": "true",
+              "@href": "https://api.elsevier.com/content/search/sciencedirect?start=0&count=25&query=specific-author%28C+Skourlas%29&view=complete",
+              "@ref": "first",
+              "@type": "application/json"
+            }
+          ],
+          "entry": [
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040099",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040099?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040099",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.098",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Combining Probabilistic Classifiers for Text Classification",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "307",
+              "prism:endingPage": "312",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Kostas Fragos",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Kostas Fragos"
+                  },
+                  {
+                    "$": "Petros Belsis"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.098",
+              "pii": "S1877042814040099",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040105",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040105?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040105",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.099",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Sharing Knowledge and Integrated Information in Therapeutic Radiological Physics",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "313",
+              "prism:endingPage": "320",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Argyroula Christopoulou",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Argyroula Christopoulou"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Petros Belsis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.099",
+              "pii": "S1877042814040105",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003741",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003741?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003741",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.081",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Employing Ubiquitous Computing Devices and Technologies in the Higher Education Classroom of the Future",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "487",
+              "prism:endingPage": "494",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Catherine Marinagi",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Catherine Marinagi"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Petros Belsis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.081",
+              "pii": "S1877042813003741",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003753",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003753?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003753",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.082",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "New Directions for Pervasive Computing in Logistics",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "495",
+              "prism:endingPage": "502",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Catherine Marinagi",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Catherine Marinagi"
+                  },
+                  {
+                    "$": "Petros Belsis"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.082",
+              "pii": "S1877042813003753",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040786",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040786?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040786",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.159",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "The Analysis of the Length of Studies in Higher Education based on Clustering and the Extraction of Association Rules",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "567",
+              "prism:endingPage": "575",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Petros Belsis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Petros Belsis"
+                  },
+                  {
+                    "$": "Ioannis Chalaris"
+                  },
+                  {
+                    "$": "Manolis Chalaris"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Anastasios Tsolakidis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.159",
+              "pii": "S1877042814040786",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003777",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003777?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003777",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.084",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Extraction of Rules based on Students’ Questionnaires",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "510",
+              "prism:endingPage": "517",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Manolis Chalaris",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Manolis Chalaris"
+                  },
+                  {
+                    "$": "Ioannis Chalaris"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Anastasios Tsolakidis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.084",
+              "pii": "S1877042813003777",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003716",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003716?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003716",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.078",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "e-Doctor: A Web based Support Vector Machine for Automatic Medical Diagnosis",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "467",
+              "prism:endingPage": "474",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "A. Kampouraki",
+              "authors": {
+                "author": [
+                  {
+                    "$": "A. Kampouraki"
+                  },
+                  {
+                    "$": "D. Vassis"
+                  },
+                  {
+                    "$": "P. Belsis"
+                  },
+                  {
+                    "$": "C. Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.078",
+              "pii": "S1877042813003716",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003704",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003704?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003704",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.077",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "A Resource Reservation and Traffic Categorization Agent for QoS in Medical Ad Hoc Networks",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "460",
+              "prism:endingPage": "466",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "D. Vassis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "D. Vassis"
+                  },
+                  {
+                    "$": "A. Kampouraki"
+                  },
+                  {
+                    "$": "P. Belsis"
+                  },
+                  {
+                    "$": "C. Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.077",
+              "pii": "S1877042813003704",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003686",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003686?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003686",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.075",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Personalized Adaptive Networked Learning for Disabled Students & Social Networking for the Inclusion of students – The Multimedu tool",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "451",
+              "prism:endingPage": "455",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Nektarios Giannoulis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Nektarios Giannoulis"
+                  },
+                  {
+                    "$": "Anthimoula Kagia"
+                  },
+                  {
+                    "$": "Panos Kakoulidis"
+                  },
+                  {
+                    "$": "Costas Rikkou"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.075",
+              "pii": "S1877042813003686",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2008-12-31T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S0164121208002744",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S0164121208002744?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S0164121208002744",
+              "dc:identifier": "DOI:10.1016/j.jss.2008.12.031",
+              "openaccess": "false",
+              "openaccessFlag": null,
+              "dc:title": "CUDL language semantics: Updating FDB data",
+              "prism:publicationName": "Journal of Systems and Software",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "82",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "947",
+              "prism:endingPage": "962",
+              "prism:coverDate": "2009-06-30",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Nikitas N. Karanikolas",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Nikitas N. Karanikolas"
+                  },
+                  {
+                    "$": "Maria Nitsiou"
+                  },
+                  {
+                    "$": "Emmanuel J. Yannakoudakis"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.jss.2008.12.031",
+              "pii": "S0164121208002744",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040452",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040452?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040452",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.134",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "An Agent Based Architecture Benchmark",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "429",
+              "prism:endingPage": "435",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Petros Belsis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Petros Belsis"
+                  },
+                  {
+                    "$": "Stefanos Gritzalis"
+                  },
+                  {
+                    "$": "Costas Lambrinoudakis"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Dimitris Vassis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.134",
+              "pii": "S1877042814040452",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040336",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040336?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040336",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.122",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Risk Reduction Strategies in Online Shopping: E-trust Perspective",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "418",
+              "prism:endingPage": "423",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Angeliki Vos",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Angeliki Vos"
+                  },
+                  {
+                    "$": "Catherine Marinagi"
+                  },
+                  {
+                    "$": "Panagiotis Trivellas"
+                  },
+                  {
+                    "$": "Niclas Eberhagen"
+                  },
+                  {
+                    "$": "Georgios Giannakopoulos"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.122",
+              "pii": "S1877042814040336",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040440",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040440?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040440",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.133",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "The Human Factor of Information Security: Unintentional Damage Perspective",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "424",
+              "prism:endingPage": "428",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Efthymia Metalidou",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Efthymia Metalidou"
+                  },
+                  {
+                    "$": "Catherine Marinagi"
+                  },
+                  {
+                    "$": "Panagiotis Trivellas"
+                  },
+                  {
+                    "$": "Niclas Eberhagen"
+                  },
+                  {
+                    "$": "Georgios Giannakopoulos"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.133",
+              "pii": "S1877042814040440",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            }
+          ]
+        }
+      },
+      {
+        "search-results": {
+          "opensearch:totalResults": "13",
+          "opensearch:startIndex": "0",
+          "opensearch:itemsPerPage": "13",
+          "opensearch:Query": {
+            "@role": "request",
+            "@searchTerms": "aus(C Skourlas)",
+            "@startPage": "0"
+          },
+          "link": [
+            {
+              "@_fa": "true",
+              "@href": "https://api.elsevier.com/content/search/sciencedirect?start=0&count=25&query=aus%28C+Skourlas%29&view=complete",
+              "@ref": "self",
+              "@type": "application/json"
+            },
+            {
+              "@_fa": "true",
+              "@href": "https://api.elsevier.com/content/search/sciencedirect?start=0&count=25&query=aus%28C+Skourlas%29&view=complete",
+              "@ref": "first",
+              "@type": "application/json"
+            }
+          ],
+          "entry": [
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040099",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040099?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040099",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.098",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Combining Probabilistic Classifiers for Text Classification",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "307",
+              "prism:endingPage": "312",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Kostas Fragos",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Kostas Fragos"
+                  },
+                  {
+                    "$": "Petros Belsis"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.098",
+              "pii": "S1877042814040099",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040105",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040105?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040105",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.099",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Sharing Knowledge and Integrated Information in Therapeutic Radiological Physics",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "313",
+              "prism:endingPage": "320",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Argyroula Christopoulou",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Argyroula Christopoulou"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Petros Belsis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.099",
+              "pii": "S1877042814040105",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003741",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003741?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003741",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.081",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Employing Ubiquitous Computing Devices and Technologies in the Higher Education Classroom of the Future",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "487",
+              "prism:endingPage": "494",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Catherine Marinagi",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Catherine Marinagi"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Petros Belsis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.081",
+              "pii": "S1877042813003741",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003753",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003753?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003753",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.082",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "New Directions for Pervasive Computing in Logistics",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "495",
+              "prism:endingPage": "502",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Catherine Marinagi",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Catherine Marinagi"
+                  },
+                  {
+                    "$": "Petros Belsis"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.082",
+              "pii": "S1877042813003753",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040786",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040786?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040786",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.159",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "The Analysis of the Length of Studies in Higher Education based on Clustering and the Extraction of Association Rules",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "567",
+              "prism:endingPage": "575",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Petros Belsis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Petros Belsis"
+                  },
+                  {
+                    "$": "Ioannis Chalaris"
+                  },
+                  {
+                    "$": "Manolis Chalaris"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Anastasios Tsolakidis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.159",
+              "pii": "S1877042814040786",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003777",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003777?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003777",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.084",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Extraction of Rules based on Students’ Questionnaires",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "510",
+              "prism:endingPage": "517",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Manolis Chalaris",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Manolis Chalaris"
+                  },
+                  {
+                    "$": "Ioannis Chalaris"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Anastasios Tsolakidis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.084",
+              "pii": "S1877042813003777",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003716",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003716?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003716",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.078",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "e-Doctor: A Web based Support Vector Machine for Automatic Medical Diagnosis",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "467",
+              "prism:endingPage": "474",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "A. Kampouraki",
+              "authors": {
+                "author": [
+                  {
+                    "$": "A. Kampouraki"
+                  },
+                  {
+                    "$": "D. Vassis"
+                  },
+                  {
+                    "$": "P. Belsis"
+                  },
+                  {
+                    "$": "C. Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.078",
+              "pii": "S1877042813003716",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003704",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003704?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003704",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.077",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "A Resource Reservation and Traffic Categorization Agent for QoS in Medical Ad Hoc Networks",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "460",
+              "prism:endingPage": "466",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "D. Vassis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "D. Vassis"
+                  },
+                  {
+                    "$": "A. Kampouraki"
+                  },
+                  {
+                    "$": "P. Belsis"
+                  },
+                  {
+                    "$": "C. Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.077",
+              "pii": "S1877042813003704",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003686",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003686?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003686",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.075",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Personalized Adaptive Networked Learning for Disabled Students & Social Networking for the Inclusion of students – The Multimedu tool",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "451",
+              "prism:endingPage": "455",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Nektarios Giannoulis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Nektarios Giannoulis"
+                  },
+                  {
+                    "$": "Anthimoula Kagia"
+                  },
+                  {
+                    "$": "Panos Kakoulidis"
+                  },
+                  {
+                    "$": "Costas Rikkou"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.075",
+              "pii": "S1877042813003686",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2008-12-31T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S0164121208002744",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S0164121208002744?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S0164121208002744",
+              "dc:identifier": "DOI:10.1016/j.jss.2008.12.031",
+              "openaccess": "false",
+              "openaccessFlag": null,
+              "dc:title": "CUDL language semantics: Updating FDB data",
+              "prism:publicationName": "Journal of Systems and Software",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "82",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "947",
+              "prism:endingPage": "962",
+              "prism:coverDate": "2009-06-30",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Nikitas N. Karanikolas",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Nikitas N. Karanikolas"
+                  },
+                  {
+                    "$": "Maria Nitsiou"
+                  },
+                  {
+                    "$": "Emmanuel J. Yannakoudakis"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.jss.2008.12.031",
+              "pii": "S0164121208002744",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040452",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040452?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040452",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.134",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "An Agent Based Architecture Benchmark",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "429",
+              "prism:endingPage": "435",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Petros Belsis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Petros Belsis"
+                  },
+                  {
+                    "$": "Stefanos Gritzalis"
+                  },
+                  {
+                    "$": "Costas Lambrinoudakis"
+                  },
+                  {
+                    "$": "Christos Skourlas"
+                  },
+                  {
+                    "$": "Dimitris Vassis"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.134",
+              "pii": "S1877042814040452",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040336",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040336?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040336",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.122",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "Risk Reduction Strategies in Online Shopping: E-trust Perspective",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "418",
+              "prism:endingPage": "423",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Angeliki Vos",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Angeliki Vos"
+                  },
+                  {
+                    "$": "Catherine Marinagi"
+                  },
+                  {
+                    "$": "Panagiotis Trivellas"
+                  },
+                  {
+                    "$": "Niclas Eberhagen"
+                  },
+                  {
+                    "$": "Georgios Giannakopoulos"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.122",
+              "pii": "S1877042814040336",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2014-09-29T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042814040440",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042814040440?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042814040440",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2014.07.133",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "The Human Factor of Information Security: Unintentional Damage Perspective",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "147",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "424",
+              "prism:endingPage": "428",
+              "prism:coverDate": "2014-08-25",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "Efthymia Metalidou",
+              "authors": {
+                "author": [
+                  {
+                    "$": "Efthymia Metalidou"
+                  },
+                  {
+                    "$": "Catherine Marinagi"
+                  },
+                  {
+                    "$": "Panagiotis Trivellas"
+                  },
+                  {
+                    "$": "Niclas Eberhagen"
+                  },
+                  {
+                    "$": "Georgios Giannakopoulos"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2014.07.133",
+              "pii": "S1877042814040440",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

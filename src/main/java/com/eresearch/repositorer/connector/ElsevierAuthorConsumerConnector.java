@@ -22,7 +22,6 @@ import org.springframework.web.client.RestTemplate;
 public class ElsevierAuthorConsumerConnector implements Connector {
 
     private static final String TRANSACTION_ID = "Transaction-Id";
-    private static final String ELSEVIER_AUTHOR_CONSUMER_ENDPOINT = "/author-finder/find-q";
 
     @Value("${elsevier.author.consumer.url}")
     private String elsevierAuthorConsumerUrl;
@@ -37,7 +36,7 @@ public class ElsevierAuthorConsumerConnector implements Connector {
 
     private AuthorFinderImmediateResultDto extractInfoFromElsevierAuthor(AuthorFinderDto authorFinderDto, String transactionId) {
 
-        final String url = elsevierAuthorConsumerUrl + ELSEVIER_AUTHOR_CONSUMER_ENDPOINT;
+        final String url = elsevierAuthorConsumerUrl;
 
         final HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add(TRANSACTION_ID, transactionId);

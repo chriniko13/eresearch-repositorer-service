@@ -57,6 +57,14 @@ of each one of the following described services):
 * Execute: `mvn clean verify`
 
 
+### Create Docker Image
+TODO
+
+
+### How to run service (not dockerized)
+TODO
+
+
 ### Example Request
 
 * Hitting with HTTP POST the endpoint: `http://localhost:8889/repositorer/extract`
@@ -246,6 +254,162 @@ of each one of the following described services):
                     .....
 ```
 
+
+* Hitting with HTTP POST the endpoint: `http://localhost:8889/repositorer/records/find-by-filename?full-fetch=true`
+
+    * Payload:
+    ```json
+      {
+        "filename":"RECORDGrammati_NoValue_Pantziou#2019-04-18T21:44:50.218"
+      }
+    
+    ```
+    
+    * Result:
+    ```json
+      {
+          "retrievedRecordDtos": [
+              {
+                  "filename": "RECORDGrammati_NoValue_Pantziou#2019-04-18T21:44:50.218",
+                  "record": {
+                      "id": "7df75fa8-b063-439f-bbf4-714909a346a5",
+                      "transactionId": "bd09a46a-9108-4102-8ef4-689ab53714a1",
+                      "firstname": "Grammati",
+                      "initials": "",
+                      "lastname": "Pantziou",
+                      "nameVariants": [
+                          {
+                              "firstname": "G.",
+                              "initials": "",
+                              "surname": "Pantziou"
+                          },
+                          {
+                              "firstname": "G",
+                              "initials": "",
+                              "surname": "Pantziou"
+                          }
+                      ],
+                      "createdAt": "2019-04-18T18:44:50.218Z",
+                      "entries": [
+                          {
+                              "title": "Clustering in mobile ad hoc networks through neighborhood stability-based mobility prediction",
+                              "authors": [
+                                  {
+                                      "firstname": "Charalampos",
+                                      "initials": null,
+                                      "surname": "Konstantopoulos"
+                                  },
+                                  {
+                                      "firstname": "Grammati",
+                                      "initials": null,
+                                      "surname": "Pantziou"
+                                  },
+                                  {
+                                      "firstname": "Damianos",
+                                      "initials": null,
+                                      "surname": "Gavalas"
+                                  }
+                              ],
+                              "metadata": {
+                                  "Source": "Science Direct",
+                                  "Links": "[\"https://api.elsevier.com/content/article/pii/S1389128608000923\",\"https://www.sciencedirect.com/science/article/pii/S1389128608000923?dgcid=api_sd_search-api-endpoint\"]",
+                                  "Load Date": "2008-03-16T00:00:00Z",
+                                  "Prism Url": "https://api.elsevier.com/content/article/pii/S1389128608000923",
+                                  "Dc Identifier": "DOI:10.1016/j.comnet.2008.01.018",
+                                  "Open Access": "false",
+                                  "Open Access Flag": null,
+                                  "Dc Title": "Clustering in mobile ad hoc networks through neighborhood stability-based mobility prediction",
+                                  "Prism Publication Name": "Computer Networks",
+                                  "Prism Isbn": null,
+                                  "Prism Issn": null,
+                                  "Prism Volume": "52",
+                                  "Prism Issue Identifier": null,
+                                  "Prism Issue Name": null,
+                                  "Prism Edition": null,
+                                  "Prism Starting Page": "1797",
+                                  "Prism Ending Page": "1824",
+                                  "Prism Cover Date": "2008-06-26",
+                                  "Prism Cover Display Date": null,
+                                  "Dc Creator": "Charalampos Konstantopoulos",
+                                  "Authors": "[{\"$\":\"Charalampos Konstantopoulos\"},{\"$\":\"Damianos Gavalas\"},{\"$\":\"Grammati Pantziou\"}]",
+                                  "Prism Doi": "10.1016/j.comnet.2008.01.018",
+                                  "Pii": "S1389128608000923",
+                                  "Pubtype": null,
+                                  "Prism Teaser": null,
+                                  "Dc Description": null,
+                                  "Author Keywords": null,
+                                  "Prism Aggregation Type": null,
+                                  "Prism Copyright": null,
+                                  "Scopus Id": null,
+                                  "Eid": null,
+                                  "Scopus Eid": null,
+                                  "Pubmed Id": null,
+                                  "Open Access Article": null,
+                                  "Open Archive Article": null,
+                                  "Open Access User License": null
+                              }
+                          },
+                          {
+                              "title": "Chapter 13: Design and management of vehicle-sharing systems: a survey of algorithmic approaches",
+                              "authors": [
+                                  {
+                                      "firstname": "G.",
+                                      "initials": null,
+                                      "surname": "Pantziou"
+                                  },
+                                  {
+                                      "firstname": "C.",
+                                      "initials": null,
+                                      "surname": "Konstantopoulos"
+                                  },
+                                  {
+                                      "firstname": "D.",
+                                      "initials": null,
+                                      "surname": "Gavalas"
+                                  }
+                              ],
+                              "metadata": {
+                                  "Source": "Science Direct",
+                                  "Links": "[\"https://api.elsevier.com/content/article/pii/B9780128034545000134\",\"https://www.sciencedirect.com/science/article/pii/B9780128034545000134?dgcid=api_sd_search-api-endpoint\"]",
+                                  "Load Date": "2016-06-17T00:00:00Z",
+                                  "Prism Url": "https://api.elsevier.com/content/article/pii/B9780128034545000134",
+                                  "Dc Identifier": "DOI:10.1016/B978-0-12-803454-5.00013-4",
+                                  "Open Access": "false",
+                                  "Open Access Flag": null,
+                                  "Dc Title": "Chapter 13: Design and management of vehicle-sharing systems: a survey of algorithmic approaches",
+                                  "Prism Publication Name": "Smart Cities and Homes",
+                                  "Prism Isbn": null,
+                                  "Prism Issn": null,
+                                  "Prism Volume": null,
+                                  "Prism Issue Identifier": null,
+                                  "Prism Issue Name": null,
+                                  "Prism Edition": null,
+                                  "Prism Starting Page": "261",
+                                  "Prism Ending Page": "289",
+                                  "Prism Cover Date": "2016-12-31",
+                                  "Prism Cover Display Date": null,
+                                  "Dc Creator": "D. Gavalas",
+                                  "Authors": "[{\"$\":\"D. Gavalas\"},{\"$\":\"C. Konstantopoulos\"},{\"$\":\"G. Pantziou\"}]",
+                                  "Prism Doi": "10.1016/B978-0-12-803454-5.00013-4",
+                                  "Pii": "B9780128034545000134",
+                                  "Pubtype": null,
+                                  "Prism Teaser": null,
+                                  "Dc Description": null,
+                                  "Author Keywords": null,
+                                  "Prism Aggregation Type": null,
+                                  "Prism Copyright": null,
+                                  "Scopus Id": null,
+                                  "Eid": null,
+                                  "Scopus Eid": null,
+                                  "Pubmed Id": null,
+                                  "Open Access Article": null,
+                                  "Open Archive Article": null,
+                                  "Open Access User License": null
+                              }
+                          },
+                        .....
+    
+    ```
 
 
 ### Error Report Sample

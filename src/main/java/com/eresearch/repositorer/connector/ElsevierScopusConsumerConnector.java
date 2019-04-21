@@ -22,7 +22,6 @@ import org.springframework.web.client.RestTemplate;
 public class ElsevierScopusConsumerConnector implements Connector {
 
     private static final String TRANSACTION_ID = "Transaction-Id";
-    private static final String SCOPUS_CONSUMER_ENDPOINT = "/scopus-consumer/find-q";
 
     @Value("${elsevier.scopus.consumer.url}")
     private String elsevierScopusConsumerUrl;
@@ -37,7 +36,7 @@ public class ElsevierScopusConsumerConnector implements Connector {
 
     private ScopusFinderImmediateResultDto extractInfoFromScopus(ElsevierScopusConsumerDto elsevierScopusConsumerDto, String transactionId) {
 
-        final String url = elsevierScopusConsumerUrl + SCOPUS_CONSUMER_ENDPOINT;
+        final String url = elsevierScopusConsumerUrl;
 
         final HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add(TRANSACTION_ID, transactionId);

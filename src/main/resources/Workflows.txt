@@ -34,10 +34,3 @@ Supporting workflows:
 * Concurrency-parallel improvements on workflows [COMPLETED]
 
 ---------------------------------------
-
-
-* Concurrency-parallel improvements on results transformers [NICE TO HAVE]
-    -> DBLP     [NICE TO HAVE]
-    -> SCOPUS   [NICE TO HAVE]
-    -> SCIDIR   [NICE TO HAVE]
-    -> AUTHOR   [NICE TO HAVE]

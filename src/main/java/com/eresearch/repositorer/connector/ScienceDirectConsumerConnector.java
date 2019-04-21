@@ -22,7 +22,6 @@ import org.springframework.web.client.RestTemplate;
 public class ScienceDirectConsumerConnector implements Connector {
 
     private static final String TRANSACTION_ID = "Transaction-Id";
-    private static final String SCIENCEDIRECT_CONSUMER_ENDPOINT = "/sciencedirect-consumer/find-q";
 
     @Value("${sciencedirect.consumer.url}")
     private String scienceDirectConsumerUrl;
@@ -37,7 +36,7 @@ public class ScienceDirectConsumerConnector implements Connector {
 
     private SciDirImmediateResultDto extractInfoFromScienceDirect(ElsevierScienceDirectConsumerDto elsevierScienceDirectConsumerDto, String transactionId) {
 
-        final String url = scienceDirectConsumerUrl + SCIENCEDIRECT_CONSUMER_ENDPOINT;
+        final String url = scienceDirectConsumerUrl;
 
         final HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add(TRANSACTION_ID, transactionId);

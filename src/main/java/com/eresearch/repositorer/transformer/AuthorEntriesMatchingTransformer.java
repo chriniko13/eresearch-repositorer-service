@@ -9,7 +9,10 @@ import com.eresearch.repositorer.dto.authormatcher.request.AuthorNameDto;
 import com.eresearch.repositorer.dto.authormatcher.response.AuthorMatcherResultsDto;
 import com.eresearch.repositorer.dto.authormatcher.response.StringMetricAlgorithm;
 import com.eresearch.repositorer.exception.business.RepositorerBusinessException;
+import com.eresearch.repositorer.service.CaptureRequestResponseService;
 import com.eresearch.repositorer.transformer.dto.NameDto;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Lists;
 import lombok.extern.log4j.Log4j;
 import org.modelmapper.ModelMapper;
@@ -48,12 +51,21 @@ public class AuthorEntriesMatchingTransformer {
     @Value("${author.entries.matching.multithread.approach}")
     private String isMultithreadApproach;
 
+    @Value("${capture-service.enabled}")
+    private boolean captureServiceEnabled;
+
+    @Autowired
+    private CaptureRequestResponseService captureRequestResponseService;
+
     @Autowired
     @Qualifier("authorEntriesMatchingExecutor")
     private ExecutorService authorEntriesMatchingExecutor;
 
     @Autowired
     private ModelMapper modelMapper;
+
+    @Autowired
+    private ObjectMapper objectMapper;
 
     @Autowired
     private AuthorMatcherConnector authorMatcherConnector;
@@ -145,9 +157,9 @@ public class AuthorEntriesMatchingTransformer {
 
             keepEntry = false;
 
-            for (NameDto nameDto : nameDtosToCompareAgainst) {
+            for (NameDto nameDtoToCompareAgainst : nameDtosToCompareAgainst) {
                 for (Author author : entryAuthors) {
-                    keepEntry = compare(keepEntry, nameDto, author);
+                    keepEntry = compare(keepEntry, nameDtoToCompareAgainst, author);
                 }
             }
 
@@ -173,15 +185,40 @@ public class AuthorEntriesMatchingTransformer {
         return nameDtosToCompareAgainst;
     }
 
-    private boolean compare(boolean keepEntry, NameDto nameDto, Author author) {
+    private boolean compare(boolean keepEntry,
+                            NameDto nameDtoToCompareAgainst /* Note: entry's author */,
+                            Author author) {
 
         AuthorComparisonDto authorComparisonDto = new AuthorComparisonDto(
-                modelMapper.map(nameDto, AuthorNameDto.class),
-                modelMapper.map(author, AuthorNameDto.class));
+                modelMapper.map(nameDtoToCompareAgainst, AuthorNameDto.class),
+                modelMapper.map(author, AuthorNameDto.class)
+        );
 
         try {
             AuthorMatcherResultsDto authorMatcherResultsDto
                     = authorMatcherConnector.performAuthorMatchingWithRetries(authorComparisonDto);
+
+
+            if (captureServiceEnabled) {
+                try {
+                    String filename = String.join("_",
+                            Optional.ofNullable(author.getFirstname()).orElse("!"),
+                            Optional.ofNullable(author.getInitials()).orElse("!"),
+                            Optional.ofNullable(author.getSurname()).orElse("!")
+                    );
+
+                    String requestContents = objectMapper.writeValueAsString(authorComparisonDto);
+                    captureRequestResponseService.log(filename + "_REQUEST", requestContents, "json");
+
+
+                    String responseContents = objectMapper.writeValueAsString(authorMatcherResultsDto);
+                    captureRequestResponseService.log(filename + "_RESPONSE", responseContents, "json");
+
+                } catch (JsonProcessingException error) {
+                    log.error("error occurred during serialization of contents to sent them to capture service", error);
+                }
+            }
+
 
             Double comparisonResultFloor = authorMatcherResultsDto
                     .getResults()

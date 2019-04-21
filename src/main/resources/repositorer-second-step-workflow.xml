@@ -56,6 +56,7 @@
                                         channel="authorResultsChannel"
                                         destination="authorResultsQueue"
                                         error-channel="errorChannel"
+                                        auto-startup="true"
                                         concurrent-consumers="3" max-concurrent-consumers="20"
                                         task-executor="jmsListenersExecutorPool"/>
 
@@ -63,6 +64,7 @@
                                         channel="scopusResultsChannel"
                                         destination="scopusResultsQueue"
                                         error-channel="errorChannel"
+                                        auto-startup="true"
                                         concurrent-consumers="3" max-concurrent-consumers="20"
                                         task-executor="jmsListenersExecutorPool"/>
 
@@ -70,6 +72,7 @@
                                         channel="dblpResultsChannel"
                                         destination="dblpResultsQueue"
                                         error-channel="errorChannel"
+                                        auto-startup="true"
                                         concurrent-consumers="3" max-concurrent-consumers="20"
                                         task-executor="jmsListenersExecutorPool"/>
 
@@ -77,6 +80,7 @@
                                         channel="scidirResultsChannel"
                                         destination="scidirResultsQueue"
                                         error-channel="errorChannel"
+                                        auto-startup="true"
                                         concurrent-consumers="3" max-concurrent-consumers="20"
                                         task-executor="jmsListenersExecutorPool"/>
 
@@ -169,22 +173,22 @@
     <!-- queues -->
     <beans:bean id="authorResultsQueue"
                 class="org.apache.activemq.command.ActiveMQQueue">
-        <beans:constructor-arg value="AUTHOR_RESULTS_QUEUE"/>
+        <beans:constructor-arg value="#{T(com.eresearch.repositorer.application.configuration.JmsConfiguration).AUTHOR_RESULTS_QUEUE}"/>
     </beans:bean>
 
     <beans:bean id="scopusResultsQueue"
                 class="org.apache.activemq.command.ActiveMQQueue">
-        <beans:constructor-arg value="SCOPUS_RESULTS_QUEUE"/>
+        <beans:constructor-arg value="#{T(com.eresearch.repositorer.application.configuration.JmsConfiguration).SCOPUS_RESULTS_QUEUE}"/>
     </beans:bean>
 
     <beans:bean id="dblpResultsQueue"
                 class="org.apache.activemq.command.ActiveMQQueue">
-        <beans:constructor-arg value="DBLP_RESULTS_QUEUE"/>
+        <beans:constructor-arg value="#{T(com.eresearch.repositorer.application.configuration.JmsConfiguration).DBLP_RESULTS_QUEUE}"/>
     </beans:bean>
 
     <beans:bean id="scidirResultsQueue"
                 class="org.apache.activemq.command.ActiveMQQueue">
-        <beans:constructor-arg value="SCIDIR_RESULTS_QUEUE"/>
+        <beans:constructor-arg value="#{T(com.eresearch.repositorer.application.configuration.JmsConfiguration).SCIDIR_RESULTS_QUEUE}"/>
     </beans:bean>
 
     <!-- connection factory -->

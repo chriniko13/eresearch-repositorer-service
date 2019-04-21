@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 
 public interface RepositorerResource {
 
-    ResponseEntity<RepositorerImmediateResultDto> extractAuthorInfo(RepositorerFindDto dto) throws RepositorerValidationException;
+    ResponseEntity<RepositorerImmediateResultDto> extractAuthorInfo(RepositorerFindDto dto, String transactionId) throws RepositorerValidationException;
 
     ResponseEntity<RepositorerImmediateResultDto> extractAuthorInfo(RepositorerFindDtos dto) throws RepositorerValidationException;
 }

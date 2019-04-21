@@ -22,7 +22,6 @@ import org.springframework.web.client.RestTemplate;
 public class DblpConsumerConnector implements Connector {
 
     private static final String TRANSACTION_ID = "Transaction-Id";
-    private static final String DBLP_CONSUMER_ENDPOINT = "/dblp-consumer/find-q";
 
     @Value("${dblp.consumer.url}")
     private String dblpConsumerUrl;
@@ -37,7 +36,7 @@ public class DblpConsumerConnector implements Connector {
 
     private DblpImmediateResultDto extractInfoFromDblp(DblpConsumerDto dblpConsumerDto, String transactionId) {
 
-        final String url = dblpConsumerUrl + DBLP_CONSUMER_ENDPOINT;
+        final String url = dblpConsumerUrl;
 
         final HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add(TRANSACTION_ID, transactionId);

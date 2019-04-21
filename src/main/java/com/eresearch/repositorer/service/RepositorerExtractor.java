@@ -6,7 +6,7 @@ import com.eresearch.repositorer.dto.repositorer.request.RepositorerFindDtos;
 
 public interface RepositorerExtractor {
 
-    void extractAuthorInfo(RepositorerFindDto dto);
+    void extractAuthorInfo(RepositorerFindDto dto, String transactionId);
 
     void extractAuthorInfo(RepositorerFindDtos dtos);
 }

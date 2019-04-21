@@ -1,0 +1,118 @@
+{
+  "operation-result": true,
+  "process-finished-date": 1555630584.114000000,
+  "comparison-results": {
+    "COSINE_SIMILARITY": {
+      "comparison-result": 0.0,
+      "comparison-result-floor": 0.0,
+      "comparison-result-ceil": 0.0
+    },
+    "DAMERAU_LEVENSHTEIN": {
+      "comparison-result": 0.23529410362243652,
+      "comparison-result-floor": 0.23,
+      "comparison-result-ceil": 0.24
+    },
+    "LONGEST_COMMON_SUBSTRING": {
+      "comparison-result": 0.11764705926179886,
+      "comparison-result-floor": 0.11,
+      "comparison-result-ceil": 0.12
+    },
+    "SMITH_WATERMAN_GOTOH": {
+      "comparison-result": 0.2777777910232544,
+      "comparison-result-floor": 0.27,
+      "comparison-result-ceil": 0.28
+    },
+    "EUCLIDEAN_DISTANCE": {
+      "comparison-result": 0.0,
+      "comparison-result-floor": 0.0,
+      "comparison-result-ceil": 0.0
+    },
+    "DICE": {
+      "comparison-result": 0.0,
+      "comparison-result-floor": 0.0,
+      "comparison-result-ceil": 0.0
+    },
+    "JARO": {
+      "comparison-result": 0.48322442173957825,
+      "comparison-result-floor": 0.48,
+      "comparison-result-ceil": 0.49
+    },
+    "OVERLAP_COEFFICIENT": {
+      "comparison-result": 0.0,
+      "comparison-result-floor": 0.0,
+      "comparison-result-ceil": 0.0
+    },
+    "BLOCK_DISTANCE": {
+      "comparison-result": 0.0,
+      "comparison-result-floor": 0.0,
+      "comparison-result-ceil": 0.0
+    },
+    "SMITH_WATERMAN": {
+      "comparison-result": 0.2222222238779068,
+      "comparison-result-floor": 0.22,
+      "comparison-result-ceil": 0.23
+    },
+    "NEEDLEMAN_WUNCH": {
+      "comparison-result": 0.5,
+      "comparison-result-floor": 0.5,
+      "comparison-result-ceil": 0.5
+    },
+    "JARO_WINKLER": {
+      "comparison-result": 0.48322442173957825,
+      "comparison-result-floor": 0.48,
+      "comparison-result-ceil": 0.49
+    },
+    "SIMON_WHITE": {
+      "comparison-result": 0.25,
+      "comparison-result-floor": 0.25,
+      "comparison-result-ceil": 0.25
+    },
+    "LONGEST_COMMON_SUBSEQUENCE": {
+      "comparison-result": 0.23529411852359772,
+      "comparison-result-floor": 0.23,
+      "comparison-result-ceil": 0.24
+    },
+    "JACCARD": {
+      "comparison-result": 0.0,
+      "comparison-result-floor": 0.0,
+      "comparison-result-ceil": 0.0
+    },
+    "Q_GRAMS_DISTANCE": {
+      "comparison-result": 0.0,
+      "comparison-result-floor": 0.0,
+      "comparison-result-ceil": 0.0
+    },
+    "IDENTITY": {
+      "comparison-result": 0.0,
+      "comparison-result-floor": 0.0,
+      "comparison-result-ceil": 0.0
+    },
+    "LEVENSHTEIN": {
+      "comparison-result": 0.23529410362243652,
+      "comparison-result-floor": 0.23,
+      "comparison-result-ceil": 0.24
+    },
+    "MONGE_ELKAN": {
+      "comparison-result": 0.2777777910232544,
+      "comparison-result-floor": 0.27,
+      "comparison-result-ceil": 0.28
+    },
+    "GENERALIZED_JACCARD": {
+      "comparison-result": 0.0,
+      "comparison-result-floor": 0.0,
+      "comparison-result-ceil": 0.0
+    }
+  },
+  "comparison-input": {
+    "first-author-name": {
+      "firstname": "C",
+      "initials": "",
+      "surname": "Skourlas"
+    },
+    "second-author-name": {
+      "firstname": "Arkady",
+      "initials": "B.",
+      "surname": "Zaslavsky"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "transactionId": "102aaf3f-f512-4cb7-8557-ca7c4f7abec2",
+  "exceptionMessage": null,
+  "authorFinderResultsDto": {
+    "operation-result": true,
+    "process-finished-date": "2019-04-19T19:00:26.309Z",
+    "requested-author-finder-dto": {
+      "author-name": {
+        "firstname": "C",
+        "initials": "",
+        "surname": "Skourlas"
+      }
+    },
+    "fetched-results-size": 1,
+    "fetched-results": [
+      {
+        "search-results": {
+          "opensearch:totalResults": "1",
+          "opensearch:startIndex": "0",
+          "opensearch:itemsPerPage": "1",
+          "opensearch:Query": {
+            "@role": "request",
+            "@searchTerms": "authlast(Skourlas) and authfirst(C )",
+            "@startPage": "0"
+          },
+          "link": [
+            {
+              "@_fa": "true",
+              "@href": "https://api.elsevier.com/content/search/author?start=0&count=25&query=authlast%28Skourlas%29+and+authfirst%28C+%29",
+              "@ref": "self",
+              "@type": "application/json"
+            },
+            {
+              "@_fa": "true",
+              "@href": "https://api.elsevier.com/content/search/author?start=0&count=25&query=authlast%28Skourlas%29+and+authfirst%28C+%29",
+              "@ref": "first",
+              "@type": "application/json"
+            }
+          ],
+          "entry": [
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/author/author_id/6507083122",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/search/author?query=au-id%286507083122%29",
+                  "@ref": "search",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.scopus.com/author/citedby.uri?partnerID=HzOxMe3b&citedAuthorId=6507083122&origin=inward",
+                  "@ref": "scopus-citedby",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.scopus.com/authid/detail.uri?partnerID=HzOxMe3b&authorId=6507083122&origin=inward",
+                  "@ref": "scopus-author",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/author/author_id/6507083122",
+              "dc:identifier": "AUTHOR_ID:6507083122",
+              "eid": "9-s2.0-6507083122",
+              "orcid": null,
+              "preferred-name": {
+                "surname": "Skourlas",
+                "given-name": "Christos",
+                "initials": "C."
+              },
+              "name-variant": [
+                {
+                  "@_fa": "true",
+                  "surname": "Skourlas",
+                  "given-name": "C.",
+                  "initials": "C."
+                }
+              ],
+              "document-count": "82",
+              "subject-area": [
+                {
+                  "@abbrev": "COMP",
+                  "@frequency": "124",
+                  "$": "Computer Science (all)"
+                },
+                {
+                  "@abbrev": "ENGI",
+                  "@frequency": "12",
+                  "$": "Engineering (all)"
+                },
+                {
+                  "@abbrev": "MEDI",
+                  "@frequency": "12",
+                  "$": "Medicine (all)"
+                }
+              ],
+              "affiliation-current": {
+                "affiliation-url": "https://api.elsevier.com/content/affiliation/affiliation_id/122086857",
+                "affiliation-id": "122086857",
+                "affiliation-name": "University of West Attika",
+                "affiliation-city": "Athens",
+                "affiliation-country": "Greece"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

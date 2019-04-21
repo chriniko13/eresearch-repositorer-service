@@ -1,0 +1,508 @@
+{
+  "transactionId": "102aaf3f-f512-4cb7-8557-ca7c4f7abec2",
+  "exceptionMessage": null,
+  "sciDirResultsDto": {
+    "operation-result": true,
+    "process-finished-date": "2019-04-21T18:17:59.517Z",
+    "requested-elsevier-sciencedirect-consumer-dto": {
+      "firstname": "C.",
+      "initials": "",
+      "surname": "Skourlas"
+    },
+    "fetched-results-size": 3,
+    "fetched-results": [
+      {
+        "search-results": {
+          "opensearch:totalResults": "2",
+          "opensearch:startIndex": "0",
+          "opensearch:itemsPerPage": "2",
+          "opensearch:Query": {
+            "@role": "request",
+            "@searchTerms": "aut(C. Skourlas)",
+            "@startPage": "0"
+          },
+          "link": [
+            {
+              "@_fa": "true",
+              "@href": "https://api.elsevier.com/content/search/sciencedirect?start=0&count=25&query=aut%28C.+Skourlas%29&view=complete",
+              "@ref": "self",
+              "@type": "application/json"
+            },
+            {
+              "@_fa": "true",
+              "@href": "https://api.elsevier.com/content/search/sciencedirect?start=0&count=25&query=aut%28C.+Skourlas%29&view=complete",
+              "@ref": "first",
+              "@type": "application/json"
+            }
+          ],
+          "entry": [
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003716",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003716?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003716",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.078",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "e-Doctor: A Web based Support Vector Machine for Automatic Medical Diagnosis",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "467",
+              "prism:endingPage": "474",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "A. Kampouraki",
+              "authors": {
+                "author": [
+                  {
+                    "$": "A. Kampouraki"
+                  },
+                  {
+                    "$": "D. Vassis"
+                  },
+                  {
+                    "$": "P. Belsis"
+                  },
+                  {
+                    "$": "C. Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.078",
+              "pii": "S1877042813003716",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003704",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003704?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003704",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.077",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "A Resource Reservation and Traffic Categorization Agent for QoS in Medical Ad Hoc Networks",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "460",
+              "prism:endingPage": "466",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "D. Vassis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "D. Vassis"
+                  },
+                  {
+                    "$": "A. Kampouraki"
+                  },
+                  {
+                    "$": "P. Belsis"
+                  },
+                  {
+                    "$": "C. Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.077",
+              "pii": "S1877042813003704",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            }
+          ]
+        }
+      },
+      {
+        "search-results": {
+          "opensearch:totalResults": "2",
+          "opensearch:startIndex": "0",
+          "opensearch:itemsPerPage": "2",
+          "opensearch:Query": {
+            "@role": "request",
+            "@searchTerms": "specific-author(C. Skourlas)",
+            "@startPage": "0"
+          },
+          "link": [
+            {
+              "@_fa": "true",
+              "@href": "https://api.elsevier.com/content/search/sciencedirect?start=0&count=25&query=specific-author%28C.+Skourlas%29&view=complete",
+              "@ref": "self",
+              "@type": "application/json"
+            },
+            {
+              "@_fa": "true",
+              "@href": "https://api.elsevier.com/content/search/sciencedirect?start=0&count=25&query=specific-author%28C.+Skourlas%29&view=complete",
+              "@ref": "first",
+              "@type": "application/json"
+            }
+          ],
+          "entry": [
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003716",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003716?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003716",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.078",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "e-Doctor: A Web based Support Vector Machine for Automatic Medical Diagnosis",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "467",
+              "prism:endingPage": "474",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "A. Kampouraki",
+              "authors": {
+                "author": [
+                  {
+                    "$": "A. Kampouraki"
+                  },
+                  {
+                    "$": "D. Vassis"
+                  },
+                  {
+                    "$": "P. Belsis"
+                  },
+                  {
+                    "$": "C. Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.078",
+              "pii": "S1877042813003716",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003704",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003704?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003704",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.077",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "A Resource Reservation and Traffic Categorization Agent for QoS in Medical Ad Hoc Networks",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "460",
+              "prism:endingPage": "466",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "D. Vassis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "D. Vassis"
+                  },
+                  {
+                    "$": "A. Kampouraki"
+                  },
+                  {
+                    "$": "P. Belsis"
+                  },
+                  {
+                    "$": "C. Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.077",
+              "pii": "S1877042813003704",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            }
+          ]
+        }
+      },
+      {
+        "search-results": {
+          "opensearch:totalResults": "2",
+          "opensearch:startIndex": "0",
+          "opensearch:itemsPerPage": "2",
+          "opensearch:Query": {
+            "@role": "request",
+            "@searchTerms": "aus(C. Skourlas)",
+            "@startPage": "0"
+          },
+          "link": [
+            {
+              "@_fa": "true",
+              "@href": "https://api.elsevier.com/content/search/sciencedirect?start=0&count=25&query=aus%28C.+Skourlas%29&view=complete",
+              "@ref": "self",
+              "@type": "application/json"
+            },
+            {
+              "@_fa": "true",
+              "@href": "https://api.elsevier.com/content/search/sciencedirect?start=0&count=25&query=aus%28C.+Skourlas%29&view=complete",
+              "@ref": "first",
+              "@type": "application/json"
+            }
+          ],
+          "entry": [
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003716",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003716?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003716",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.078",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "e-Doctor: A Web based Support Vector Machine for Automatic Medical Diagnosis",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "467",
+              "prism:endingPage": "474",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "A. Kampouraki",
+              "authors": {
+                "author": [
+                  {
+                    "$": "A. Kampouraki"
+                  },
+                  {
+                    "$": "D. Vassis"
+                  },
+                  {
+                    "$": "P. Belsis"
+                  },
+                  {
+                    "$": "C. Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.078",
+              "pii": "S1877042813003716",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            },
+            {
+              "@force-array": null,
+              "error": null,
+              "@_fa": "true",
+              "load-date": "2013-04-09T00:00:00Z",
+              "link": [
+                {
+                  "@_fa": "true",
+                  "@href": "https://api.elsevier.com/content/article/pii/S1877042813003704",
+                  "@ref": "self",
+                  "@type": null
+                },
+                {
+                  "@_fa": "true",
+                  "@href": "https://www.sciencedirect.com/science/article/pii/S1877042813003704?dgcid=api_sd_search-api-endpoint",
+                  "@ref": "scidir",
+                  "@type": null
+                }
+              ],
+              "prism:url": "https://api.elsevier.com/content/article/pii/S1877042813003704",
+              "dc:identifier": "DOI:10.1016/j.sbspro.2013.02.077",
+              "openaccess": "true",
+              "openaccessFlag": null,
+              "dc:title": "A Resource Reservation and Traffic Categorization Agent for QoS in Medical Ad Hoc Networks",
+              "prism:publicationName": "Procedia - Social and Behavioral Sciences",
+              "prism:isbn": null,
+              "prism:issn": null,
+              "prism:volume": "73",
+              "prism:issueIdentifier": null,
+              "prism:issueName": null,
+              "prism:edition": null,
+              "prism:startingPage": "460",
+              "prism:endingPage": "466",
+              "prism:coverDate": "2013-02-27",
+              "prism:coverDisplayDate": null,
+              "dc:creator": "D. Vassis",
+              "authors": {
+                "author": [
+                  {
+                    "$": "D. Vassis"
+                  },
+                  {
+                    "$": "A. Kampouraki"
+                  },
+                  {
+                    "$": "P. Belsis"
+                  },
+                  {
+                    "$": "C. Skourlas"
+                  }
+                ]
+              },
+              "prism:doi": "10.1016/j.sbspro.2013.02.077",
+              "pii": "S1877042813003704",
+              "pubType": null,
+              "prism:teaser": null,
+              "dc:description": null,
+              "authkeywords": null,
+              "prism:aggregationType": null,
+              "prism:copyright": null,
+              "scopus-id": null,
+              "eid": null,
+              "scopus-eid": null,
+              "pubmed-id": null,
+              "openaccessArticle": null,
+              "openArchiveArticle": null,
+              "openaccessUserLicense": null
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

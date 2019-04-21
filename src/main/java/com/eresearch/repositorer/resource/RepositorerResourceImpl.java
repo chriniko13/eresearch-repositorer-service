@@ -28,17 +28,19 @@ public class RepositorerResourceImpl implements RepositorerResource {
     @Autowired
     private RepositorerExtractor repositorerExtractor;
 
+    //TODO add optional tx id as header...
     @RequestMapping(method = RequestMethod.POST, path = "/extract", consumes = {
             MediaType.APPLICATION_JSON_UTF8_VALUE}, produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @Override
     public @ResponseBody
     ResponseEntity<RepositorerImmediateResultDto> extractAuthorInfo(
-            @RequestBody RepositorerFindDto dto) throws RepositorerValidationException {
+            @RequestBody RepositorerFindDto dto,
+            @RequestHeader(required = false, name = "Transaction-Id") String transactionId) throws RepositorerValidationException {
 
         try {
             repositorerFindDtoValidator.validate(dto);
 
-            repositorerExtractor.extractAuthorInfo(dto);
+            repositorerExtractor.extractAuthorInfo(dto, transactionId);
 
             return ResponseEntity.ok(new RepositorerImmediateResultDto(EXTRACTION_FIRED));
 
@@ -52,7 +54,8 @@ public class RepositorerResourceImpl implements RepositorerResource {
             MediaType.APPLICATION_JSON_UTF8_VALUE}, produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @Override
     public @ResponseBody
-    ResponseEntity<RepositorerImmediateResultDto> extractAuthorInfo(@RequestBody RepositorerFindDtos repositorerFindDtos) throws RepositorerValidationException {
+    ResponseEntity<RepositorerImmediateResultDto> extractAuthorInfo(
+            @RequestBody RepositorerFindDtos repositorerFindDtos) throws RepositorerValidationException {
 
         try {
             repositorerFindDtosValidator.validate(repositorerFindDtos);
