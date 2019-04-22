@@ -18,7 +18,7 @@ This service integrates with the following external systems:
 It consists of two workflows in order to collect and store the data.
 * `repositorer-first-step-workflow.xml`
 
-![first](first-workflow.svg)
+![first](first-workflow.jpg)
 
 
 * `repositorer-second-step-workflow.xml` TODO explain better & diagram
