@@ -225,8 +225,6 @@ public class SpecificationIT {
                     Assert.assertEquals(NameLookupStatus.COMPLETED, nameLookup.getNameLookupStatus());
                 });
 
-        // TODO check other datasources that are ok...
-
 
         // cleanup
         NameLookup nameLookup = namesLookupRepository.findNamesLookupByTransactionIdEquals(transactionId);

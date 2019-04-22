@@ -28,7 +28,6 @@ public class RepositorerResourceImpl implements RepositorerResource {
     @Autowired
     private RepositorerExtractor repositorerExtractor;
 
-    //TODO add optional tx id as header...
     @RequestMapping(method = RequestMethod.POST, path = "/extract", consumes = {
             MediaType.APPLICATION_JSON_UTF8_VALUE}, produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @Override
