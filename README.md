@@ -52,7 +52,7 @@ of each one of the following described services):
 * Execute: `mvn clean test`
 
 
-### Integration Tests (run docker-compose first)
+### Integration Tests (run docker-compose first, [eresearch-author-matcher](https://github.com/chriniko13/eresearch-author-matcher) is the only needed from platform's services, all the others are mocked with WireMock)
 
 * Execute: `mvn clean verify`
 
@@ -65,7 +65,7 @@ TODO
 TODO
 
 
-### Example Request
+### Example Request for Author Extraction
 
 * Hitting with HTTP POST the endpoint: `http://localhost:8889/repositorer/extract`
 
@@ -78,7 +78,7 @@ TODO
 ```
 
 
-### Example Response
+### Example Response from Author Exctration
 
 ```json
 {
@@ -86,7 +86,7 @@ TODO
 }
 ```
 
-#### After Extraction, we hit MongoDB in order to see the contents of the just fired extraction
+#### After Extraction, we hit MongoDB in order to see the contents of the just fired extraction (Records Resource)
 
 * Hitting with HTTP GET the endpoint: `http://localhost:8889/repositorer/records/find-all`
 
@@ -466,5 +466,10 @@ TODO
     ]
 }
 ```
+
+
+### Discarded Message Sample
+
+TODO
 
 

@@ -3,12 +3,13 @@ package com.eresearch.repositorer.it;
 import com.eresearch.repositorer.EresearchRepositorerApplication;
 import com.eresearch.repositorer.application.configuration.JmsConfiguration;
 import com.eresearch.repositorer.core.FileSupport;
-import com.eresearch.repositorer.domain.externalsystem.DynamicExternalSystemMessagesAwaiting;
 import com.eresearch.repositorer.domain.lookup.NameLookup;
 import com.eresearch.repositorer.domain.lookup.NameLookupStatus;
 import com.eresearch.repositorer.domain.record.Author;
 import com.eresearch.repositorer.domain.record.Record;
+import com.eresearch.repositorer.dto.repositorer.request.RecordFilenameDto;
 import com.eresearch.repositorer.dto.repositorer.request.RepositorerFindDto;
+import com.eresearch.repositorer.dto.repositorer.response.RecordSearchResultDto;
 import com.eresearch.repositorer.dto.repositorer.response.RetrievedRecordDto;
 import com.eresearch.repositorer.repository.DynamicExternalSystemMessagesAwaitingRepository;
 import com.eresearch.repositorer.repository.NamesLookupRepository;
@@ -36,7 +37,6 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
@@ -99,6 +99,16 @@ public class SpecificationIT {
 
         mockFirstWorkflowCommunications();
 
+        // Note: also mock scopus connector communication when we have results from author elsevier (AUTHOR_RESULTS_QUEUE)
+        stubFor(post(urlEqualTo("/scopus-consumer/find-q"))
+                .withRequestBody(new EqualToJsonPattern("{\n" +
+                        "\"au-id\" : \"6507083122\" \n" +
+                        "}", false, false))
+                .willReturn(aResponse()
+                        .withStatus(200)
+                        .withHeader("Content-Type", "application/json")
+                        .withBody("{\"message\":\"Response will be written in queue.\"}")));
+
 
         // when
         ResponseEntity<String> responseEntity = restTemplate.exchange(
@@ -131,7 +141,6 @@ public class SpecificationIT {
 
         // when
         injectSecondWorkflowCommunications();
-        mockAuthorMatchingServiceInteraction();
 
 
         // then
@@ -140,11 +149,8 @@ public class SpecificationIT {
         author.setSurname("Skourlas");
 
         Awaitility.await()
-                .atMost(3, TimeUnit.MINUTES)
+                .atMost(1, TimeUnit.MINUTES)
                 .untilAsserted(() -> {
-
-                    List<DynamicExternalSystemMessagesAwaiting> all = awaitingRepository.findAll();
-
 
                     Collection<RetrievedRecordDto> results = recordRepository.find(true, author);
 
@@ -153,10 +159,70 @@ public class SpecificationIT {
                             .findAny();
 
                     Assert.assertTrue(retrievedRecordDto.isPresent());
+                });
 
-                    Record record = retrievedRecordDto.get().getRecord();
-                    //TODO add more assertions...
+        // --- check record's contents ---
+        ResponseEntity<RecordSearchResultDto> allRecordsResponseEntity = restTemplate.getForEntity(
+                "http://localhost:" + port + "/repositorer/records/find-all",
+                RecordSearchResultDto.class
+        );
+        Assert.assertNotNull(allRecordsResponseEntity.getBody());
 
+        RecordSearchResultDto searchResultDto = allRecordsResponseEntity.getBody();
+        Collection<RetrievedRecordDto> allRecords = searchResultDto.getRetrievedRecordDtos();
+
+        Assert.assertTrue(allRecords.size() >= 1);
+
+        RetrievedRecordDto retrievedRecordDto = allRecords
+                .stream()
+                .filter(r -> r.getFilename().contains("Skourlas"))
+                .findAny()
+                .orElseThrow(IllegalStateException::new);
+
+        String filenameToFetchRecord = retrievedRecordDto.getFilename();
+        RecordFilenameDto recordFilenameDto = new RecordFilenameDto(filenameToFetchRecord);
+
+        ResponseEntity<RecordSearchResultDto> searchByFilenameResponseEntity = restTemplate.postForEntity(
+                "http://localhost:" + port + "/repositorer/records/find-by-filename?full-fetch=true",
+                recordFilenameDto,
+                RecordSearchResultDto.class);
+
+        Collection<RetrievedRecordDto> searchResults = searchByFilenameResponseEntity.getBody().getRetrievedRecordDtos();
+        Assert.assertEquals(1, searchResults.size());
+
+
+        RetrievedRecordDto result = searchResults.iterator().next();
+
+        RetrievedRecordDto expected = objectMapper.readValue(
+                FileSupport.getResource("test/first_case_operation_result.json"),
+                RetrievedRecordDto.class
+        );
+
+        Record resultRecord = result.getRecord();
+        Record expectedRecord = expected.getRecord();
+
+        Assert.assertEquals(expectedRecord.getTransactionId(), resultRecord.getTransactionId());
+
+        Assert.assertEquals(expectedRecord.getFirstname(), resultRecord.getFirstname());
+        Assert.assertEquals(expectedRecord.getInitials(), resultRecord.getInitials());
+        Assert.assertEquals(expectedRecord.getLastname(), resultRecord.getLastname());
+
+        Assert.assertEquals(expectedRecord.getNameVariants().size(), resultRecord.getNameVariants().size());
+
+        Assert.assertEquals(expectedRecord.getEntries().size(), resultRecord.getEntries().size());
+
+        // -----------------------------------
+
+        Awaitility.await()
+                .atMost(1, TimeUnit.MINUTES)
+                .untilAsserted(() -> {
+                    NameLookup nameLookup = namesLookupRepository.findNamesLookupByTransactionIdEquals(transactionId);
+
+                    Assert.assertEquals(repositorerFindDto.getFirstname(), nameLookup.getFirstname());
+                    Assert.assertEquals(repositorerFindDto.getInitials(), nameLookup.getInitials());
+                    Assert.assertEquals(repositorerFindDto.getSurname(), nameLookup.getSurname());
+
+                    Assert.assertEquals(NameLookupStatus.COMPLETED, nameLookup.getNameLookupStatus());
                 });
 
         // TODO check other datasources that are ok...
@@ -166,7 +232,18 @@ public class SpecificationIT {
         NameLookup nameLookup = namesLookupRepository.findNamesLookupByTransactionIdEquals(transactionId);
         namesLookupRepository.delete(nameLookup.getId());
 
-        //TODO delete just stored record
+
+        recordRepository.find(true, author)
+                .stream()
+                .filter(r -> r.getRecord().getTransactionId().equals(transactionId))
+                .findAny()
+                .ifPresent(r -> {
+
+                    System.out.println("    >>> WILL DELETE JUST STORED RECORD...");
+                    String filename = r.getFilename();
+
+                    recordRepository.delete(filename);
+                });
 
 
         // Note: just for throttling purposes.
@@ -299,16 +376,6 @@ public class SpecificationIT {
                 )
                 .forEach(r -> sendMessage(JmsConfiguration.AUTHOR_RESULTS_QUEUE, r));
 
-        // Note: also mock scopus connector communication because now we have results from author elsevier (AUTHOR_RESULTS_QUEUE)
-        stubFor(post(urlEqualTo("/scopus-consumer/find-q"))
-                .withRequestBody(new EqualToJsonPattern("{\n" +
-                        "\"au-id\" : \"6507083122\" \n" +
-                        "}", false, false))
-                .willReturn(aResponse()
-                        .withStatus(200)
-                        .withHeader("Content-Type", "application/json")
-                        .withBody("{\"message\":\"Response will be written in queue.\"}")));
-
 
         // SCOPUS_RESULTS_QUEUE (1 time)
         String scopusResult = FileSupport.getResource("test/scopus_result/christos_skourlas_6507083122.json");
@@ -336,10 +403,6 @@ public class SpecificationIT {
         scidirResult = FileSupport.getResource("test/scidir_result/c_dot_skourlas.json");
         sendMessage(JmsConfiguration.SCIDIR_RESULTS_QUEUE, scidirResult);
 
-    }
-
-    private void mockAuthorMatchingServiceInteraction() {
-        //TODO...
     }
 
     private void sendMessage(String queueName, String message) {

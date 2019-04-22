@@ -204,7 +204,11 @@ public class AuthorEntriesMatchingTransformer {
                     String filename = String.join("_",
                             Optional.ofNullable(author.getFirstname()).orElse("!"),
                             Optional.ofNullable(author.getInitials()).orElse("!"),
-                            Optional.ofNullable(author.getSurname()).orElse("!")
+                            Optional.ofNullable(author.getSurname()).orElse("!"),
+                            "$",
+                            Optional.ofNullable(nameDtoToCompareAgainst.getFirstname()).orElse("!"),
+                            Optional.ofNullable(nameDtoToCompareAgainst.getInitials()).orElse("!"),
+                            Optional.ofNullable(nameDtoToCompareAgainst.getSurname()).orElse("!")
                     );
 
                     String requestContents = objectMapper.writeValueAsString(authorComparisonDto);
