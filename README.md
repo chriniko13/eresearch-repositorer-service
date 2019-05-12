@@ -21,13 +21,15 @@ It consists of two workflows in order to collect and store the data.
 ![first](first_workflow.jpg)
 
 
-* `repositorer-second-step-workflow.xml` TODO explain better & diagram
+* `repositorer-second-step-workflow.xml`
+
+![second](second_workflow.jpg)
 
 
 
 Also it handles errors with the following workflows:
-* `repositorer-error-handling-aggregators-workflow.xml` TODO explain better & diagram
-* `repositorer-error-handling-workflow.xml` TODO explain better & diagram
+* `repositorer-error-handling-aggregators-workflow.xml`
+* `repositorer-error-handling-workflow.xml`
 
 
 ### Convenient UI (Admin Portal) in order to run repositorer operations
