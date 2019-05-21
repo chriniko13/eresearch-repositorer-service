@@ -39,16 +39,19 @@ Also it handles errors with the following workflows:
 
 ### External Dependencies needed in order to run service (Other services && Infrastructure)
 
-Build docker images for the following services (detailed info on how to build docker image can be found on README.md
-of each one of the following described services):
-
 * Dependencies
-    * [eresearch-author-matcher](https://github.com/chriniko13/eresearch-author-matcher)
-    * [eresearch-dblp-consumer](https://github.com/chriniko13/eresearch-dblp-consumer)
-    * [eresearch-scidir-consumer](https://github.com/chriniko13/eresearch-sciencedirect-consumer)
-    * [eresearch-author-finder](https://github.com/chriniko13/eresearch-author-finder)
-    * [eresearch-scopus-consumer](https://github.com/chriniko13/eresearch-scopus-consumer)
-    * MongoDB && ActiveMQ
+
+    * Infrastructure
+        * MongoDB
+        * ActiveMQ
+
+    * Platform Services (Build docker images for the following services (detailed info on how to build docker image can be found on README.md
+                         of each one of the following described services))
+        * [eresearch-author-matcher](https://github.com/chriniko13/eresearch-author-matcher)
+        * [eresearch-dblp-consumer](https://github.com/chriniko13/eresearch-dblp-consumer)
+        * [eresearch-scidir-consumer](https://github.com/chriniko13/eresearch-sciencedirect-consumer)
+        * [eresearch-author-finder](https://github.com/chriniko13/eresearch-author-finder)
+        * [eresearch-scopus-consumer](https://github.com/chriniko13/eresearch-scopus-consumer)
 
 * How to init dependencies
     * Execute: `docker-compose up`
@@ -66,11 +69,18 @@ of each one of the following described services):
 
 
 ### Create Docker Image
-TODO
+* Execute: `mvn clean install -DskipUTs=true -DskipITs=true`
+* Execute: `docker build -t chriniko/eresearch-repositorer:1.0 .` in order to build docker image
+
+* Fast: `mvn clean install -DskipUTs=true -DskipITs=true && docker build -t chriniko/eresearch-repositorer:1.0 .`
 
 
 ### How to run service (not dockerized)
-TODO
+1. Execute: `docker-compose up`
+2. Execute: `mvn clean install -DskipUTs=true -DskipITs=true`
+3. Execute: `java -Dspring.profiles.active=dev -jar target/eresearch-repositorer-1.0-boot.jar`
+4. (Optional) Start: [eresearch-repositorer-admin-portal](https://github.com/chriniko13/eresearch-repositorer-admin-portal) with: `mvn tomcat7:run`
+5. (Optional) To shutdown: `docker-compose down`
 
 
 ### Example Request for Author Extraction

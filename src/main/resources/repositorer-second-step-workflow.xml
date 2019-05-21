@@ -193,7 +193,7 @@
 
     <!-- connection factory -->
     <beans:bean name="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
-        <beans:property name="brokerURL" value="tcp://localhost:61616"/>
+        <beans:property name="brokerURL" value="${activemq.brokerURL}"/>
     </beans:bean>
 
 </beans:beans>
