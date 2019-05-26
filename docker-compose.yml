@@ -3,22 +3,6 @@ version: '3.3'
 services:
 
   #### INFRASTRUCTURE ####
-
-  mysql: # it is needed from platform services.
-    image: mysql:5.7
-    restart: always
-    command: --init-file /data/application/init.sql
-    volumes:
-      - ./init.sql:/data/application/init.sql
-      - my-db:/var/lib/mysql
-    environment:
-      MYSQL_DATABASE: 'scidir_consumer'
-      MYSQL_ROOT_PASSWORD: 'password'
-    ports:
-      - '3306:3306'
-    expose:
-      - '3306'
-
   activemq:
     image: webcenter/activemq:latest
     ports:
@@ -43,12 +27,11 @@ services:
 
 
 
-  #### PLATFORM SERVICES (DEPENDS ON: MySQL, ActiveMQ) ####
+  #### PLATFORM SERVICES ####
 
   eresearch-scidir-consumer:
     image: chriniko/eresearch-scidir-consumer:1.0
     depends_on:
-      - mysql
       - activemq
     ports:
       - 8080:8080
@@ -56,7 +39,6 @@ services:
   eresearch-scopus-consumer:
     image: chriniko/eresearch-scopus-consumer:1.0
     depends_on:
-      - mysql
       - activemq
     ports:
       - 8082:8082
@@ -64,7 +46,6 @@ services:
   eresearch-dblp-consumer:
     image: chriniko/eresearch-dblp-consumer:1.0
     depends_on:
-      - mysql
       - activemq
     ports:
       - 8884:8884
@@ -72,15 +53,12 @@ services:
   eresearch-author-finder:
     image: chriniko/eresearch-author-finder:1.0
     depends_on:
-      - mysql
       - activemq
     ports:
       - 8083:8083
 
   eresearch-author-matcher:
     image: chriniko/eresearch-author-matcher:1.0
-    depends_on:
-      - mysql
     ports:
       - 8881:8881
 
