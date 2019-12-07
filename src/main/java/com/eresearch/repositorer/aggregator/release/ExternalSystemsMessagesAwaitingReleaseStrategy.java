@@ -34,9 +34,6 @@ public class ExternalSystemsMessagesAwaitingReleaseStrategy implements ReleaseSt
             this.dynamicNoOfMessages = dynamicNoOfMessages;
         }
 
-        public boolean isDynamicNoOfMessages() {
-            return dynamicNoOfMessages;
-        }
     }
 
     @Value("${extract.using.author.namevariants}")
@@ -70,7 +67,7 @@ public class ExternalSystemsMessagesAwaitingReleaseStrategy implements ReleaseSt
 
         final Integer countOfNotDynamicExternalSystems = Arrays
                 .stream(ExternalSystem.values())
-                .filter(externalSystem -> !externalSystem.isDynamicNoOfMessages())
+                .filter(externalSystem -> !externalSystem.dynamicNoOfMessages)
                 .map(externalSystem -> 1)
                 .reduce(0, Integer::sum);
 
@@ -86,7 +83,7 @@ public class ExternalSystemsMessagesAwaitingReleaseStrategy implements ReleaseSt
 
         for (ExternalSystem externalSystem : ExternalSystem.values()) {
 
-            if (!externalSystem.isDynamicNoOfMessages()) {
+            if (!externalSystem.dynamicNoOfMessages) {
                 continue;
             }
 
